@@ -12,4 +12,8 @@ describe DockingStation do
     it "expects bike.working? to equal true" do
       expect((Bike.new).working?).to eq true
     end
+
+    it "expect docking_station to respond to dock" do
+        expect(DockingStation.new).to respond_to(:dock).with(1).argument
+    end
 end
